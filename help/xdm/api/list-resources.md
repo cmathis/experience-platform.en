@@ -79,7 +79,7 @@ The most common query parameters for paging include:
 
 | Parameter | Description |
 | --- | --- |
-| `start` | Specify where the listed results should be gin. Example: `start=2` will list results from the third returned item onward.  |
+| `start` | Specify where the listed results should begin. The value you use comes from the _page.next attribute of the list response. If the _page.next value is null, then there is not additional page available.  |
 | `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
 | `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before title (`orderby=-title`) will sort items by title in descending order (Z-A). |
 
