@@ -332,7 +332,7 @@ A successful response returns the details of the updated schema, which now inclu
 
 ## Create a reference identity descriptor {#reference-identity}
 
-Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `email` field in "[!DNL Hotels]", `email` must be given a reference identity descriptor.
+Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `email` field in "[!DNL Hotels]", `favoriteHotel` must be given a reference identity descriptor.
 
 Create a reference descriptor for the destination schema by making a POST request to the `/tenant/descriptors` endpoint.
 
@@ -358,7 +358,7 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Email"
   }'
 ```
@@ -380,7 +380,7 @@ A successful response returns the details of the newly created reference descrip
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Email",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
